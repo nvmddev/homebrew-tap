@@ -7,20 +7,12 @@ Nightscout blood glucose, always visible in the macOS menu bar.
 
 ```sh
 brew install --cask josi19/tap/sugarglider
+xattr -dr com.apple.quarantine /Applications/Sugarglider.app
 ```
 
 Sugarglider is ad-hoc signed rather than notarized by Apple, so macOS puts it in
-quarantine on first launch. Either skip that up front:
-
-```sh
-brew install --cask --no-quarantine josi19/tap/sugarglider
-```
-
-…or clear the flag afterwards:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Sugarglider.app
-```
+quarantine on first launch — the second line clears that. Homebrew 6 removed the
+`--no-quarantine` flag, so there's no way to skip it during install.
 
 ## Upgrading
 
