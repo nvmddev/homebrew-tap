@@ -1,8 +1,8 @@
 # Rendered into <tap>/Casks/sugarglider.rb by .github/workflows/cask.yml.
 # Placeholders are substituted with sed — keep them literal.
 cask "sugarglider" do
-  version "0.2.0"
-  sha256 "93b92f95561375a2dfa253d3b6a80e49347e3cb74129d4156ea14e32a3b9d0e5"
+  version "0.3.0"
+  sha256 "7c77410c3d618218f4308b46c6f608881609b8e6f3dd0ba031eb8547c9f4e9c5"
 
   url "https://github.com/josi19/sugarglider/releases/download/v#{version}/Sugarglider-#{version}.zip"
   name "Sugarglider"
