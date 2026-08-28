@@ -1,33 +1,33 @@
 # nvmddev/homebrew-tap
 
-Homebrew tap for [Sugarglider](https://github.com/nvmddev/sugarglider) — your
-Nightscout blood glucose, always visible in the macOS menu bar.
-
-## Install
+Homebrew casks for my macOS apps.
 
 ```sh
-brew install --cask nvmddev/tap/sugarglider
+brew tap nvmddev/tap
+```
+
+| App | | |
+|---|---|---|
+| [Sugarglider](https://github.com/nvmddev/sugarglider) | Nightscout blood glucose in the menu bar | `brew install --cask nvmddev/tap/sugarglider` |
+| [LimitPeek](https://github.com/nvmddev/limitpeek) | Claude usage limits in the menu bar | `brew install --cask nvmddev/tap/limitpeek` |
+
+Upgrade with `brew upgrade --cask <name>`.
+
+## Gatekeeper
+
+Sugarglider is ad-hoc signed rather than notarized, so macOS quarantines it on
+first launch. Clear the flag after installing:
+
+```sh
 xattr -dr com.apple.quarantine /Applications/Sugarglider.app
 ```
 
-Sugarglider is ad-hoc signed rather than notarized by Apple, so macOS puts it in
-quarantine on first launch — the second line clears that. Homebrew 6 removed the
-`--no-quarantine` flag, so there's no way to skip it during install.
-
-## Upgrading
-
-```sh
-brew upgrade --cask sugarglider
-```
+Homebrew 6 removed `--no-quarantine`, so there is no way to skip it during
+install. LimitPeek is notarized and needs nothing.
 
 ## About this repo
 
-`Casks/sugarglider.rb` is written automatically by the
-[cask workflow](https://github.com/nvmddev/sugarglider/blob/main/.github/workflows/cask.yml)
-in the main repository — which a release calls, and which can also be run on its
-own — from
-[this template](https://github.com/nvmddev/sugarglider/blob/main/.github/homebrew/sugarglider.rb.tmpl).
-Don't edit it by hand — the next release overwrites it.
+Everything in `Casks/` is written by the release workflow of the app it belongs
+to. Don't edit those files by hand — the next release overwrites them.
 
-Issues and pull requests belong in
-[nvmddev/sugarglider](https://github.com/nvmddev/sugarglider/issues), not here.
+Issues and pull requests belong in the app's own repository, not here.
