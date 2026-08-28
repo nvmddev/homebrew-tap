@@ -1,12 +1,12 @@
-# josi19/homebrew-tap
+# nvmddev/homebrew-tap
 
-Homebrew tap for [Sugarglider](https://github.com/josi19/sugarglider) — your
+Homebrew tap for [Sugarglider](https://github.com/nvmddev/sugarglider) — your
 Nightscout blood glucose, always visible in the macOS menu bar.
 
 ## Install
 
 ```sh
-brew install --cask josi19/tap/sugarglider
+brew install --cask nvmddev/tap/sugarglider
 xattr -dr com.apple.quarantine /Applications/Sugarglider.app
 ```
 
@@ -23,10 +23,11 @@ brew upgrade --cask sugarglider
 ## About this repo
 
 `Casks/sugarglider.rb` is written automatically by the
-[release workflow](https://github.com/josi19/sugarglider/blob/main/.github/workflows/release.yml)
-in the main repository, from
-[this template](https://github.com/josi19/sugarglider/blob/main/.github/homebrew/sugarglider.rb.tmpl).
+[cask workflow](https://github.com/nvmddev/sugarglider/blob/main/.github/workflows/cask.yml)
+in the main repository — which a release calls, and which can also be run on its
+own — from
+[this template](https://github.com/nvmddev/sugarglider/blob/main/.github/homebrew/sugarglider.rb.tmpl).
 Don't edit it by hand — the next release overwrites it.
 
 Issues and pull requests belong in
-[josi19/sugarglider](https://github.com/josi19/sugarglider/issues), not here.
+[nvmddev/sugarglider](https://github.com/nvmddev/sugarglider/issues), not here.
