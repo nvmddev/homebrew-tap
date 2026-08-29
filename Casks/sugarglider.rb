@@ -1,13 +1,13 @@
 # Rendered into <tap>/Casks/sugarglider.rb by .github/workflows/cask.yml.
 # Placeholders are substituted with sed — keep them literal.
 cask "sugarglider" do
-  version "0.4.0"
-  sha256 "7836fb0a53a3a3e1b8ca9dd6cfd95b99ccfe8ca4f4d249835ddb200c91aea771"
+  version "0.5.0"
+  sha256 "46549a8bbb58edb91a74e4e218997bf7fd960620b55e5c5353f6e7367299ab2a"
 
-  url "https://github.com/josi19/sugarglider/releases/download/v#{version}/Sugarglider-#{version}.zip"
+  url "https://github.com/nvmddev/sugarglider/releases/download/v#{version}/Sugarglider-#{version}.zip"
   name "Sugarglider"
   desc "Nightscout blood glucose in the macOS menu bar"
-  homepage "https://github.com/josi19/sugarglider"
+  homepage "https://github.com/nvmddev/sugarglider"
 
   # @Observable / the Observation framework put the floor at macOS 14.
   # A bare symbol already means "this version or newer"; the ">= :sonoma"
