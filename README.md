@@ -13,17 +13,6 @@ brew tap nvmddev/tap
 
 Upgrade with `brew upgrade --cask <name>`.
 
-## Gatekeeper
-
-Sugarglider is ad-hoc signed rather than notarized, so macOS quarantines it on
-first launch. Clear the flag after installing:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Sugarglider.app
-```
-
-Homebrew 6 removed `--no-quarantine`, so there is no way to skip it during
-install. LimitPeek is notarized and needs nothing.
 
 ## About this repo
 
