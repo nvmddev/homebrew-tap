@@ -1,8 +1,8 @@
 # Rendered into <tap>/Casks/limitpeek.rb by .github/workflows/cask.yml.
 # Placeholders are substituted with sed — keep them literal.
 cask "limitpeek" do
-  version "0.2.0"
-  sha256 "27957ac052c4e674fa2b49de8a8f7eda2f1f3583ce2c6a0372b16ffc414b593e"
+  version "0.2.1"
+  sha256 "845b1b17ec922d9e3648c8856dbdf27fdd842cc2a04d4510346ae51cb6d491b5"
 
   url "https://github.com/nvmddev/limitpeek/releases/download/v#{version}/LimitPeek-#{version}.zip"
   name "LimitPeek"
