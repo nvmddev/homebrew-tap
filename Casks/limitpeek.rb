@@ -1,8 +1,8 @@
 # Rendered into <tap>/Casks/limitpeek.rb by .github/workflows/cask.yml.
 # Placeholders are substituted with sed — keep them literal.
 cask "limitpeek" do
-  version "0.1.0"
-  sha256 "4c9f7d957d9ecd99b7a4da959e5416cbc0d6fe6a89746daf1c629a5820d7e4a8"
+  version "0.2.0"
+  sha256 "27957ac052c4e674fa2b49de8a8f7eda2f1f3583ce2c6a0372b16ffc414b593e"
 
   url "https://github.com/nvmddev/limitpeek/releases/download/v#{version}/LimitPeek-#{version}.zip"
   name "LimitPeek"
@@ -12,6 +12,8 @@ cask "limitpeek" do
   # MenuBarExtra and @Observable put the floor at macOS 14. A bare symbol
   # already means "this version or newer"; the ">= :sonoma" form is deprecated.
   depends_on macos: :sonoma
+  # Apple-silicon-only release: the app is built for arm64.
+  depends_on arch: :arm64
 
   app "LimitPeek.app"
 
